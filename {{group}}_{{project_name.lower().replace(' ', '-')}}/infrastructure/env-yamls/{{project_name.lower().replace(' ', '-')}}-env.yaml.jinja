@@ -1,0 +1,25 @@
+name: {{project_name.lower().replace(' ', '-')}}
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pydantic=1.10.10
+  - pyyaml
+  - scikit-image
+  - numpy<1.25
+  - tifffile
+  - pandas
+  - aicsimageio[all]
+  - bioformats_jar
+  - matplotlib
+  - tqdm
+  - iprogress
+  - ipywidgets
+  - questionary
+  - jupyter
+  - stackview
+  - sphinx
+  - furo
+  - myst-parser
+  - sphinx-inline-tabs
+  - pre-commit

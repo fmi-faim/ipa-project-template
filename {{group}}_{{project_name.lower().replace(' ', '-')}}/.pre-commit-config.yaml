@@ -1,0 +1,26 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: check-docstring-first
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml # checks for correct yaml syntax for github actions ex.
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.287
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+# mypy will force you to type your code ;)
+#   - repo: https://github.com/pre-commit/mirrors-mypy
+#     rev: v0.910-1
+#     hooks:
+#       - id: mypy
+#         language: python
+#         args: [--strict, --ignore-missing-imports]
+#         additional_dependencies: ['types-requests', 'types-PyYAML']
+#         exclude: docs/source/conf.py

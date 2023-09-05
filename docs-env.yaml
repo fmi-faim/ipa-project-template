@@ -1,0 +1,10 @@
+name: sphinx-docs
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - sphinx
+  - furo
+  - myst-parser
+  - sphinx-inline-tabs
+  - pre-commit
