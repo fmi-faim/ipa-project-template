@@ -24,14 +24,14 @@ Copier will ask you a series of questions whose answers will be used to generate
 To start the generation process run
 
 ```bash
-copier copy git+https://github.com/fmi-faim/ipa-project-template my-ipa-project
+copier copy git+https://github.com/fmi-faim/ipa-project-template faim_demo-project
 ```
 
 inside your CLI with the active `copier-env` environment.
 This will copy the personalized IPA project template into the current working directory.
 
 ```{note}
-You can replace the `.` with the path to the desired destination directory.
+The template will create a directory `faim_demo-project` and copy all required files into it.
 ```
 
 Congratulations you have created a new personalized IPA project!

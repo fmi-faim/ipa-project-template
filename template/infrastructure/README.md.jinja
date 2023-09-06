@@ -10,11 +10,11 @@ An environment is a collection of tools, packages and dependencies which are req
 With mambaforge we have an environment manager which we can use to build envrionments by providing an environment recipe stored as `.yaml` file.
 
 ```{attention}
-Make sure that you are in the root-directory `{{group}}_{{project_name.lower().replace(' ', '-')}}`.
+Make sure that you are in the root-directory of your project.
 ```
 
 With the following command a new envrionment is created with the name `{{project_name.lower().replace(' ', '-')}}`.
-The packages which are installed are defined in the file `{{group}}_{{project_name.lower().replace(' ', '-')}}/infrastructure/env-yamls/{{project_name.lower().replace(' ', '-')}}-env.yaml`.
+The packages which are installed are defined in the file `infrastructure/env-yamls/{{project_name.lower().replace(' ', '-')}}-env.yaml`.
 
 ```bash
 mamba env create -f infrastructure/env-yamls/{{project_name.lower().replace(' ', '-')}}-env.yaml --always-copy

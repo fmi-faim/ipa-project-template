@@ -24,7 +24,7 @@ Image Processing & Analysis (IPA) plays a vital role in life sciences, yet manag
     ```
 2. Copy the template:
     ```bash
-    copier copy git+https://github.com/fmi-faim/ipa-project-template my-ipa-project
+    copier copy git+https://github.com/fmi-faim/ipa-project-template faim_demo-project
     ```
 
 For detailed instructions, please refer to the [documentation](https://fmi-faim.github.io/ipa-project-template/setup.html).

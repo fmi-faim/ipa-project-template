@@ -2,7 +2,7 @@
 The IPA projects structure aims to support the whole development cycle of your project.
 
 ## Project Root
-In the project root directory we have the `README.md` and `LICENSE` files as well as two hidden files `.gitignore` and `.pre-commit-config.yaml`.
+In the project root directory (e.g. `faim_demo-project`) we have the `README.md` and `LICENSE` files as well as two hidden files `.gitignore` and `.pre-commit-config.yaml`.
 
 `README.md`
 :  The `README.md` is the entry point to your project. This is a great place to add an abstract outlining your project and maybe even add a teaser image. If you host your project on GitHub, GitHub will use the content of this file and render it as welcome page for the repository.
