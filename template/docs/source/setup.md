@@ -1,2 +1,2 @@
-```{include} ../../infrastructure/apps/README.md
+```{include} ../../infrastructure/README.md
 ```
