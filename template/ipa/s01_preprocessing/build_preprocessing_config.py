@@ -12,6 +12,8 @@ import os
 import questionary
 import yaml
 
+CONFIG_NAME = "preprocessing_config.yaml"
+
 
 def main() -> None:
     """
@@ -29,9 +31,7 @@ def main() -> None:
         "output_dir": os.path.relpath(output_dir, cwd),
     }
 
-    os.makedirs(output_dir)
-
-    from ipa.s01_preprocessing.run_preprocessing import CONFIG_NAME
+    os.makedirs(output_dir, exist_ok=True)
 
     with open(os.path.join(cwd, CONFIG_NAME), "w") as f:
         yaml.safe_dump(config, f)
