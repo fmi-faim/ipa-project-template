@@ -21,7 +21,7 @@ Your command line promt should now be prefixed with `(copier-env)`.
 
 ## Generate an IPA Project with Copier
 Copier will ask you a series of questions whose answers will be used to generate a tailored IPA project for you.
-To start the generation process run
+To start the generation process run:
 
 ```bash
 copier copy git+https://github.com/fmi-faim/ipa-project-template faim_demo-project
@@ -35,3 +35,12 @@ The template will create a directory `faim_demo-project` and copy all required f
 ```
 
 Congratulations you have created a new personalized IPA project!
+
+Now you can deactivate the `copier-env` and change into the project root-directory with
+
+```bash
+mamba deactivate
+cd faim_demo-project
+```
+
+or open the directory in your file browser.

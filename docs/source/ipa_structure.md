@@ -16,6 +16,9 @@ In the project root directory (e.g. `faim_demo-project`) we have the `README.md`
 `.pre-commit-config.yaml`
 : Like the `.gitignore` this file becomes relevant once you start versioning your code with git. [Pre-commit](https://pre-commit.com/) is a tool which formats your code before it undergoes version control, which helps to spot actual code differences.
 
+`.copier-answers.yml`
+: This document is created by copier to keep track of your [answers](https://copier.readthedocs.io/en/stable/configuring/#answers_file).
+
 ## infrastructure
 In this directory we keep everything related to infrastructure.
 Most importantly we document which tools are required to run the image processing and analysis of this project.
@@ -27,7 +30,7 @@ Most importantly we document which tools are required to run the image processin
 : Install the necessary tools (e.g. Fiji) into this directory. Do not forget to document which version of the tool you are using and how to install it. The contents of this sub-directory are ignored by git and not versioned.
 
 `env-yamls`
-: Use this directory to save `envrionment.yaml` files. By default we provide a basic environment file, which contains a set of packages to get you started with IPA in Python.
+: Use this directory to save [environment files](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). By default we provide a basic environment file (e.g. `demo-project-env.yaml`), which contains a set of packages to get you started with IPA in Python.
 
 ## scratchpad
 This is your playground.
@@ -39,8 +42,11 @@ Use git to version these notebooks and keep track of how your ideas develop over
 Treat this really as a playground. Do not use scratchpad code for your final analysis runs.
 ```
 
+stackview-demo.ipynb
+: This is a short demo notebook which uses [stackview](https://github.com/haesleinhuepf/stackview) to display an image inside a jupyter notebook.
+
 ## ipa
-This is where your image processing & analysis code lives which is used to produce final results.
+This is where your image processing and analysis code lives which is used to produce final results.
 Our recommendation is to separate your processing and analysis into several steps. For example
 1. preprocessing,
 2. segmentation,
@@ -59,6 +65,9 @@ Here we keep track of individual IPA runs.
 The idea is to create for each run a dedicated sub-directory where the config files for the different `ipa` steps are saved.
 Each script will create a log-file and store it next to the config file.
 This allows us to keep track of each individual run and we can even use git to version them.
+
+`example/README.md`
+: An example run with instructions on how to run the defaults `ipa` steps.
 
 ## docs
 This contains all the files which are used by [sphinx](https://www.sphinx-doc.org/en/master/tutorial/index.html) to create a documentation website.
