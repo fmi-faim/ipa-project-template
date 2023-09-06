@@ -27,7 +27,7 @@ Image Processing & Analysis (IPA) plays a vital role in life sciences, yet manag
     copier copy git+https://github.com/fmi-faim/ipa-project path/to/destination
     ```
 
-For detailed instructions, please refer to the [documentation](#).
+For detailed instructions, please refer to the [documentation](https://fmi-faim.github.io/ipa-project-template/setup.html).
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
