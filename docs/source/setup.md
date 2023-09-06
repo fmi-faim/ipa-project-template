@@ -20,7 +20,7 @@ Copier will ask you a series of questions whose answers will be used to generate
 To start the generation process run
 
 ```bash
-copier copy git+https://github.com/fmi-faim/ipa-project .
+copier copy git+https://github.com/fmi-faim/ipa-project-template .
 ```
 
 inside your CLI with the active `copier-env` environment.
