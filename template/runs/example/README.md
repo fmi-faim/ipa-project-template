@@ -17,19 +17,19 @@ Before running the scripts you must [activate your environment](../../infrastruc
 The scripts write the config and log files into the current working directory. In this example it is assumed that you are in `gmicro_test-project/runs/example`.
 ```
 1. Build preprocessing config:<br>
-    `python ../../s01_preprocessing/build_preprocessing_config.py`
+    `python ../../ipa/s01_preprocessing/build_preprocessing_config.py`
 2. Run preprocessing:<br>
-    `python ../../s01_preprocessing/run_preprocessing.py`
+    `python ../../ipa/s01_preprocessing/run_preprocessing.py`
 
 ## s02_segmentation
 1. Build segmentation config:<br>
-    `python ../../s02_segmentation/build_segmentation_config.py`
+    `python ../../ipa/s02_segmentation/build_segmentation_config.py`
 2. Run segmentation:<br>
-    `python ../../s02_segmentation/run_segmentation.py`
+    `python ../../ipa/s02_segmentation/run_segmentation.py`
 
 ## s03_feature_extraction
 1. Build feature extraction config:<br>
-    `python ../../s03_feature_extraction/build_feature_extraction_config.py`
+    `python ../../ipa/s03_feature_extraction/build_feature_extraction_config.py`
 2. Run feature extraction:<br>
-    `python ../../s03_feature_extraction/run_feature_extraction.py`
+    `python ../../ipa/s03_feature_extraction/run_feature_extraction.py`
 <!-- end instructions -->

@@ -23,9 +23,3 @@
 .. automodule:: ipa.s03_feature_extraction.run_feature_extraction
     :members:
 ```
-
-## utils
-```{eval-rst}
-.. automodule:: ipa.utils
-    :members:
-```

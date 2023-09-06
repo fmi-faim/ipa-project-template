@@ -12,6 +12,8 @@ import os
 import questionary
 import yaml
 
+CONFIG_NAME = "segmentation_config.yaml"
+
 
 def main() -> None:
     """
@@ -30,8 +32,6 @@ def main() -> None:
     }
 
     os.makedirs(output_dir)
-
-    from ipa.s02_segmentation.run_segmentation import CONFIG_NAME
 
     with open(os.path.join(cwd, CONFIG_NAME), "w") as f:
         yaml.safe_dump(config, f)
