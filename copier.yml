@@ -4,11 +4,6 @@ author:
     placeholder: Will Barrow
     help: What is your first and last name?
 
-group:
-    type: str
-    placeholder: gmicro
-    help: What is your group nickname?
-
 project_name:
     type: str
     help: What is your project name?
@@ -18,5 +13,4 @@ organization:
     default: Friedrich Miescher Institute for Biomedical Research
     help: What is your organization name?
 
-# Subdirectory that contains the template. Allows template metadata to be separated from the template.
-_subdirectory: {{group}}_{{project_name.lower().replace(' ', '-')}}
+_subdirectory: template
