@@ -7,4 +7,5 @@ dependencies:
   - furo
   - myst-parser
   - sphinx-inline-tabs
+  - sphinx-copybutton
   - pre-commit
