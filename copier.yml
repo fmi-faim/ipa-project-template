@@ -17,3 +17,6 @@ organization:
     type: str
     default: Friedrich Miescher Institute for Biomedical Research
     help: What is your organization name?
+
+# Subdirectory that contains the template. Allows template metadata to be separated from the template.
+_subdirectory: {{group}}_{{project_name.lower().replace(' ', '-')}}
