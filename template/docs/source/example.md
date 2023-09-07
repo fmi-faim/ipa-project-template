@@ -5,7 +5,7 @@
 ```
 
 ```{caution}
-Did you [activate your environment](setup.md#activate-environment)?
+Did you [activate your environment](./setup.md#activate-environment)?
 ```
 
 ```{include} ../../runs/example/README.md
