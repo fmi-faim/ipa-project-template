@@ -12,6 +12,7 @@ hide-toc: true
 
 setup
 ipa_structure
-example
-license
+installation_guide
+usage_guide
+imprint
 ```

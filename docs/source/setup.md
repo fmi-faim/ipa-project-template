@@ -8,7 +8,7 @@ Our recommended way to install copier is to create a fresh environment using the
 0. If you do not have Mambaforge installed on your system download the latest version from [here](https://conda-forge.org/miniforge/) and install it.
 1. Create a new environment and install copier:</br>
     ```
-    mamba create -n copier-env -y python=3.9 -c conda-forge copier
+    mamba create -y -n copier-env python=3.9 copier -c conda-forge
     ```
 2. Activate the environment:</br>
     ```

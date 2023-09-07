@@ -2,7 +2,7 @@
 This page guides you through the setup of all necessary tools which are used for data processing and analysis in this project.
 
 ## Mambaforge
-Our recommended tool for environment managemt is [Mambaforge](https://conda-forge.org/miniforge/).
+Our recommended tool for environment managemt is [Mambaforge](https://github.com/conda-forge/miniforge).
 Please download the latest version and install it if you have not done so already.
 
 ### Build environment
@@ -17,7 +17,7 @@ With the following command a new envrionment is created with the name `{{project
 The packages which are installed are defined in the file `infrastructure/env-yamls/{{project_name.lower().replace(' ', '-')}}-env.yaml`.
 
 ```bash
-mamba env create -f infrastructure/env-yamls/{{project_name.lower().replace(' ', '-')}}-env.yaml --always-copy
+mamba env create -f infrastructure/env-yamls/{{project_name.lower().replace(' ', '-')}}-env.yaml
 ```
 
 ### Activate environment

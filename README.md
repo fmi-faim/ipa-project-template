@@ -19,7 +19,7 @@ Image Processing & Analysis (IPA) plays a vital role in life sciences, yet manag
 ## Quick Start
 1. Create a Copier environment:
     ```bash
-    mamba create -n copier python=3.9 -c conda-forge copier
+    mamba create -n copier python=3.9 copier -c conda-forge
     mamba activate copier
     ```
 2. Copy the template:
