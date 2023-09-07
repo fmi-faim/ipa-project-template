@@ -33,7 +33,7 @@ def main() -> None:
         "output_dir": os.path.relpath(output_dir, cwd),
     }
 
-    os.makedirs(output_dir)
+    os.makedirs(output_dir, exist_ok=True)
 
     with open(os.path.join(cwd, CONFIG_NAME), "w") as f:
         yaml.safe_dump(config, f)
