@@ -1,7 +1,10 @@
 <!-- start introduction -->
 # Image Processing & Analysis Project Template
 
-Image Processing & Analysis (IPA) plays a vital role in life sciences, yet managing code snippets, scripts, configurations, and documentation can pose significant challenges. This [Copier Template](https://copier.readthedocs.io/en/stable/) offers a valuable resource, especially for those new to IPA projects. It's designed to enhance the Findability, Accessibility, Interoperability, and Reusability (the FAIR principles) of image processing and analysis routines, making it an excellent choice for simplifying and structuring your work.
+Image Processing and Analysis (IPA), transforming raw image data to quantitative measurements, is a cornerstone of life sciences.
+However, as projects progress, IPA pipelines grow increasingly complex, involving the management of multiple tools, versions, and dependencies — a formidable challenge for researchers.
+To tackle this complexity, we introduce the IPA Project [Copier](https://copier.readthedocs.io/en/stable/) Template.
+This template simplifies the initiation of new IPA projects and streamlines the reorganization of existing ones, contributing to research that is more Findable, Accessible, Interoperable, and Reusable (FAIR) promoting efficiency, reproducibility, and reliability in life sciences research.
 
 ## Usage
 * **Newcomers:**
