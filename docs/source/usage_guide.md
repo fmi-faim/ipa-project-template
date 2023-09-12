@@ -126,3 +126,6 @@ The source for the documentation is stored in `docs/source`:
 : This just displays the license from the `LICENSE` file in the root directory.
 
 Everytime you change one of the `README.md` files, doc-strings in the `ipa` scripts or one of the above files you must rebuild the documentation to get an updated website.
+
+# Conclusion
+Considering these guidelines from the beginning of your project and structuring your image processing and analysis accordingly will benefit you throughout your research project. The proposed directory structure can be placed under git version control and uploaded to GitHub. When it comes time to publish your work, a simple transition to a public GitHub repository will make your research FAIR. This empowers both you and fellow researchers, facilitating easier and more efficient collaboration while building upon your discoveries.
