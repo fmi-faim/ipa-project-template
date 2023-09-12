@@ -26,4 +26,4 @@ Detailed install instructions can be found in [infrastructure/README.md](infrast
 Do not forget to cite our [publication]() if you use any of our provided materials.
 
 ---
-This project was generated with the [faim-ipa-project]() copier template.
+This project was generated with the [faim-ipa-project](https://fmi-faim.github.io/ipa-project-template/) copier template.
