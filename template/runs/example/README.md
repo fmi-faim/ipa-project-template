@@ -14,7 +14,7 @@ Before running the scripts you must [activate your environment](../../infrastruc
 <!-- start instructions -->
 ## s01_preprocessing
 ```{note}
-The scripts write the config and log files into the current working directory. In this example it is assumed that you are in `gmicro_test-project/runs/example`.
+The scripts write the config and log files into the current working directory. In this example it is assumed that you are in `runs/example`.
 ```
 1. Build preprocessing config:<br>
     `python ../../ipa/s01_preprocessing/build_preprocessing_config.py`
