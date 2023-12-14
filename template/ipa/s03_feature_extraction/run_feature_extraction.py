@@ -54,13 +54,13 @@ def main(input_dir: str, segmentation_dir: str, output_dir: str) -> None:
     logger.info(f"Output directory: {output_dir}")
 
     #####################################################
-    #                Add you code below.                #
+    #                Add your code below.                #
     #####################################################
 
     logger.warning("Nothing implemented!")
 
     #####################################################
-    #                Add you code above.                #
+    #                Add your code above.                #
     #####################################################
 
     logger.info("Done!")
