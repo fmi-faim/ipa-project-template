@@ -2,15 +2,15 @@
 This page guides you through the setup of all necessary tools which are used for data processing and analysis in this project.
 
 ## Mambaforge
-Our recommended tool for environment managemt is [Mambaforge](https://github.com/conda-forge/miniforge).
+Our recommended tool for environment management is [Mambaforge](https://github.com/conda-forge/miniforge).
 Please download the latest version and install it if you have not done so already.
 
 ### Build environment
 An environment is a collection of tools, packages and dependencies which are required to execute a script.
-With mambaforge we have an environment manager which we can use to build envrionments by providing an environment recipe stored as `.yaml` file.
+With mambaforge, we have an environment manager we can use to build environments by providing an environment recipe stored as `.yaml` file.
 
 ```{attention}
-Make sure that you are in the root-directory of your project.
+Make sure that you are in the root directory of your project.
 ```
 
 With the following command a new envrionment is created with the name `{{project_name.lower().replace(' ', '-')}}`.
@@ -21,11 +21,11 @@ mamba env create -f infrastructure/env-yamls/{{project_name.lower().replace(' ',
 ```
 
 ### Activate environment
-Once an envrionment is created it must be activated such that we can use the installed packages.
+Once an environment is created, it must be activated so we can use the installed packages.
 
 ```bash
 mamba activate {{project_name.lower().replace(' ', '-')}}
 ```
 
-Once the environment is activate your CLI prompt will be prefixed with the environment name e.g.:
+Once the environment is activated, your CLI prompt will be prefixed with the environment name, e.g.:
 `({{project_name.lower().replace(' ', '-')}})$ `
