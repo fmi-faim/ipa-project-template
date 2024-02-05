@@ -7,7 +7,6 @@ segmentation_config.yaml. The segmentation_config.yaml is consumed
 by the run_segmentation.py script.
 """
 
-
 import os
 import questionary
 import yaml
