@@ -7,7 +7,6 @@ preprocessing_config.yaml. The preprocessing_config.yaml is consumed
 by the run_preprocessing.py script.
 """
 
-
 import os
 import questionary
 import yaml

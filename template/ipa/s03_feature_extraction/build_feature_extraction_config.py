@@ -7,7 +7,6 @@ feature_extraction_config.yaml. The feature_extraction_config.yaml
 is consumed by the run_feature_extraction.py script.
 """
 
-
 import os
 import questionary
 import yaml
