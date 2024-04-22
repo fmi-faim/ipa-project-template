@@ -1,0 +1,84 @@
+site_name: {{ project_name.title() }}
+# site_url: TO-DO
+# repo_url: TO-DO
+# repo_name: TO-DO
+copyright: Copyright &copy; {{ '%Y' | strftime }}, {{organization}}
+nav:
+  - Home: index.md
+  - Data: data.md
+  - Installation: installation.md
+  - Tutorial:
+    - 'Tutorials': tutorial/tutorials.md
+  - 'How-to Guides':
+    - 'Guides': how_to/guides.md
+  - Explanation:
+    - 'Explanations': explanation/explanations.md
+  - References:
+    - References: references/references.md
+  - Imprint: imprint.md
+theme:
+  name: material
+  favicon: images/favicon.ico
+  icon:
+    repo:
+      fontawesome/brands/github
+  font:
+    text: Source Sans Pro
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.footer
+    - header.autohide
+    - content.code.copy
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+#   - git-committers:
+#       repository: TO-DO
+#       branch: main
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [ ipa ]
+          options:
+            docstring_style: numpy
+            docstring_section_style: spacy
+            show_root_heading: false
+            show_root_toc_entry: false
+            show_root_full_path: false
+            heading_level: 2
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
