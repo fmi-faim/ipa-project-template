@@ -1,0 +1,2 @@
+# Tutorials
+This is the entry point for new users. Tutorials should take the user by their hand and guide them step-by-step. A tutorial should have no ambiguity and should be easy to follow. Best case it is processing some publicly available data in a short amount of time i.e. a small example dataset. For more information about the style of this section look at [Diataxis - Tutorials](https://diataxis.fr/tutorials/).

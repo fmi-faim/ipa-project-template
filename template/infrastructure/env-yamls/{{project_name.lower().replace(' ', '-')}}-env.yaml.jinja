@@ -2,8 +2,8 @@ name: {{project_name.lower().replace(' ', '-')}}
 channels:
   - conda-forge
 dependencies:
-  - python=3.9
-  - pydantic=1.10.10
+  - python=3.11
+  - pydantic=1.10.13
   - pyyaml
   - scikit-image
   - numpy<1.25
@@ -18,9 +18,10 @@ dependencies:
   - questionary
   - jupyter
   - stackview
-  - sphinx
-  - furo
-  - myst-parser
-  - sphinx-inline-tabs
-  - sphinx-copybutton
+  - mkdocs
+  - mkdocs-material
+  - mkdocs-git-revision-date-localized-plugin
+  - mkdocs-git-committers-plugin-2
+  - mkdocstrings
+  - mkdocstrings-python
   - pre-commit
