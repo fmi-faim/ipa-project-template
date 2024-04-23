@@ -11,7 +11,7 @@ Image Processing and Analysis (IPA), transforming raw image data into quantitati
 ## Features
 * Easy setup and configuration.
 * Standardized directory structure for consistency.
-* Configured [Sphinx](https://www.sphinx-doc.org/en/master/) documentation template.
+* Configured [MkDocs](https://www.mkdocs.org/) documentation template.
 * Configured `environment.yaml` to get started with image processing and analysis in Python.
 <!-- end introduction -->
 
