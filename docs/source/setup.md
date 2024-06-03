@@ -16,7 +16,7 @@ Our recommended way to install copier is to create a fresh environment using the
     ```
 
 ```{note}
-Your command line promt should now be prefixed with `(copier-env)`.
+Your command line prompt should now be prefixed with `(copier-env)`.
 ```
 
 ## Generate an IPA Project with Copier
@@ -34,7 +34,7 @@ This will copy the personalized IPA project template into the current working di
 The template will create a directory `faim_demo-project` and copy all required files into it.
 ```
 
-Congratulations you have created a new personalized IPA project!
+Congratulations, you have created a new personalized IPA project!
 
 Now you can deactivate the `copier-env` and change into the project root-directory with
 

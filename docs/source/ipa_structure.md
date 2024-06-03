@@ -23,7 +23,7 @@ In the project root directory (e.g. `faim_demo-project`) we have the `README.md`
 In this directory we keep everything related to infrastructure.
 Most importantly we document which tools are required to run the image processing and analysis of this project.
 
-`REAMDE.md`
+`README.md`
 : Use the `README.md` in this directory to document the tools which you use in this project and how they can be installed.
 
 `apps`
