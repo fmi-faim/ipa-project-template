@@ -11,7 +11,7 @@ This also means that we might have to invest a little time into documenting our 
 Having a config file makes it easier to re-run the same script on different data.
 
 Now that you have your first script, which can be reused on different data, it is time to spend a little time on documentation.
-We prepared your project to use [shpinx](https://www.sphinx-doc.org/en/master/) to render a nice website with your documentation.
+We prepared your project to use [sphinx](https://www.sphinx-doc.org/en/master/) to render a nice website with your documentation.
 For now this website can only be seen locally on your machine.
 However, only a few steps are necessary to publish the whole documentation and project description, making your project accessible to others.
 
