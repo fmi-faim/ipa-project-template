@@ -7,6 +7,8 @@ channels = ["conda-forge", "bioconda"]
 platforms = ["linux-64"]
 
 [system-requirements]
+# Minimum linux version for this project to work.
+# This is necessary of some HPC setups, which run on e.g. Rocky Linux 8.
 linux="4.18"
 
 [tasks]
@@ -15,7 +17,7 @@ log_commit = {cmd = 'echo "[$(date -Iseconds)][Executing] $TASK [Git-Commit] $(g
 build_config = { cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; echo 'Implementation Missing.'", env = { WD = "runs/example"}}
 
 [dependencies]
-python = "3.11"
+python = "3.12"
 
 [feature.docs.dependencies]
 mkdocs-material = ">=9.5.18,<9.6"
@@ -46,9 +48,15 @@ jupyter = ">=1.0.0,<1.1"
 [feature.jupyter.tasks]
 jupyter = "jupyter lab"
 
+[feature.nbdev.dependencies]
+nbdev = ">=2.2.10,<2.3"
+
+[feature.nbdev.tasks]
+clean = "nbdev_clean --clear_all"
 
 [environments]
 docs = ["docs"]
 dev = ["dev"]
 nextflow = ["nextflow"]
 jupyter = ["jupyter"]
+nbdev = {features=["nbdev"], no-default-feature = true}
