@@ -212,3 +212,15 @@ $RECYCLE.BIN/
 
 # infrastructure
 infrastructure/apps/**/
+
+# pixi environments
+.pixi
+*.egg-info
+
+# Data directories
+processed_data/**
+raw_data/**
+results/**
+
+# TMP
+infrastructure/.tmp_*/**
