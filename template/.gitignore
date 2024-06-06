@@ -219,8 +219,11 @@ infrastructure/apps/**/
 
 # Data directories
 processed_data/**
+!processed_data/README.md
 raw_data/**
+!raw_data/README.md
 results/**
+!results/README.md
 
 # TMP
 infrastructure/.tmp_*/**
