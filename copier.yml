@@ -4,6 +4,11 @@ author:
     placeholder: Will Barrow
     help: What is your first and last name?
 
+author_email:
+    type: str
+    placeholder: will.barrow@mail.me
+    help: What is your email address?
+
 project_name:
     type: str
     help: What is your project name?
