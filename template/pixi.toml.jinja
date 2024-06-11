@@ -13,8 +13,8 @@ linux="4.18"
 
 [tasks]
 source_status = { cmd = 'echo "Found $(git status --porcelain source | wc -l) untracked changes in ./source." && exit $(git status --porcelain source | wc -m)'}
-log_commit = {cmd = 'echo "[$(date -Iseconds)][Executing] $TASK [Git-Commit] $(git rev-parse --verify HEAD)" >> $WD/githash.log', depends_on=["source_status"], env = {TASK = ""}}
-build_config = { cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; echo 'Implementation Missing.'", env = { WD = "runs/example"}}
+log_commit = {cmd = 'echo "[$(date -Iseconds)][Executing] $TASK [Git-Commit] $(git rev-parse --verify HEAD)" >> $WD/githash.log', env = {TASK = ""}}
+build_config = { cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; echo 'Implementation Missing.'", env = { WD = "runs/example"}, depends_on=["source_status"]}
 
 [dependencies]
 python = "3.12"
