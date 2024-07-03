@@ -15,7 +15,7 @@ project_name:
 
 organization:
     type: str
-    default: Friedrich Miescher Institute for Biomedical Research
+    default: Friedrich Miescher Institute for Biomedical Research (FMI), Basel (Switzerland)
     help: What is your organization name?
 
 _subdirectory: template
