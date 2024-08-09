@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Add a short description here"
 authors = ["{{ author }} <{{ author_email }}>"]
 channels = ["conda-forge", "bioconda"]
-platforms = ["linux-64"]
+platforms = ["linux-64", "win-64"]
 
 [system-requirements]
 # Minimum linux version for this project to work.
@@ -12,20 +12,21 @@ platforms = ["linux-64"]
 linux="4.18"
 
 [tasks]
-source_status = { cmd = 'echo "Found $(git status --porcelain source | wc -l) untracked changes in ./source." && exit $(git status --porcelain source | wc -m)'}
-log_commit = {cmd = 'echo "[$(date -Iseconds)][Executing] $TASK [Git-Commit] $(git rev-parse --verify HEAD)" >> $WD/githash.log', env = {TASK = ""}}
-build_config = { cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; echo 'Implementation Missing.'", env = { WD = "runs/example"}, depends_on=["source_status"]}
+cache_status = "python -m faim_ipa.pixi.cache_status"
+source_status = "python -m faim_ipa.pixi.src_status source"
+log_commit = {cmd = 'python -m faim_ipa.pixi.log_commit $TASK', env = {TASK = ""}}
+build_config = { cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; echo 'Implementation Missing.'", env = { WD = "runs/example"}, depends_on=["cache_status", "source_status"]}
 
 [dependencies]
 python = "3.12"
 
 [feature.docs.dependencies]
-mkdocs-material = ">=9.5.18,<9.6"
-mkdocs-git-committers-plugin-2 = ">=2.3.0,<2.4"
-mkdocstrings = ">=0.24.3,<0.25"
-mkdocstrings-python = ">=1.9.2,<1.10"
-mkdocs = ">=1.5.3,<1.6"
-mkdocs-git-revision-date-localized-plugin = ">=1.2.4,<1.3"
+mkdocs = ">=1.6.0,<2"
+mkdocs-git-committers-plugin-2 = ">=2.3.0,<3"
+mkdocs-git-revision-date-localized-plugin = ">=1.2.6,<2"
+mkdocs-material = ">=9.5.31,<10"
+mkdocstrings = ">=0.25.2,<0.26"
+mkdocstrings-python = ">=1.10.7,<2"
 
 [feature.docs.tasks]
 clean_docs = "rm -rf site"
@@ -40,7 +41,7 @@ install_hooks = "pre-commit install"
 lint = { cmd="pre-commit run --all-files", depends_on=["install_hooks"] }
 
 [feature.nextflow.target.linux-64.dependencies]
-nextflow = ">=23.10.1,<23.11"
+nextflow = ">=24.4.4,<25"
 
 [feature.jupyter.dependencies]
 jupyter = ">=1.0.0,<1.1"
@@ -60,3 +61,6 @@ dev = ["dev"]
 nextflow = ["nextflow"]
 jupyter = ["jupyter"]
 nbdev = {features=["nbdev"], no-default-feature = true}
+
+[pypi-dependencies]
+faim-ipa = ">=0.5.0, <0.6"
