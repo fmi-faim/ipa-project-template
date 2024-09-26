@@ -209,3 +209,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+# pixi environments
+.pixi
+*.egg-info

@@ -1,0 +1,21 @@
+[project]
+authors = ["Tim-Oliver Buchholz <tim-oliver.buchholz@fmi.ch>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "ipa-project-template"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+clean_docs = "rm -rf site"
+build_docs = { cmd ="OFFLINE=TRUE mkdocs build", depends_on=["clean_docs"] }
+show_docs = "mkdocs serve"
+
+[dependencies]
+mkdocs = ">=1.6.1,<2"
+mkdocs-git-committers-plugin-2 = ">=2.3.0,<3"
+mkdocs-git-revision-date-localized-plugin = ">=1.2.9,<2"
+mkdocs-material = ">=9.5.37,<10"
+mkdocstrings = ">=0.26.1,<0.27"
+mkdocstrings-python = ">=1.11.1,<2"
+markdown-include = ">=0.8.1,<0.9"

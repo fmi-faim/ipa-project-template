@@ -1,0 +1,85 @@
+site_name: "Image Processing & Analysis Project Template"
+site_url: https://fmi-faim.github.io/ipa-project-template/index.html
+repo_url: https://github.com/fmi-faim/ipa-project-template
+repo_name: ipa-project-template
+copyright: Copyright &copy; 2024, Friedrich Miescher Institute for Biomedical Research
+nav:
+  - Home: index.md
+  - 'Template Structure': ipa_structure.md
+  - Imprint: imprint.md
+theme:
+  name: material
+  logo: resources/ipa_logo.svg
+  favicon: resources/ipa_logo.svg
+  icon:
+    repo:
+      fontawesome/brands/github
+  font:
+    text: Source Sans Pro
+  language: en
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.footer
+    - header.autohide
+    - content.code.copy
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+plugins:
+  - offline:
+      enabled: !ENV [ OFFLINE, false ]  # noqa
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+     repository: https://github.com/fmi-faim/ipa-project-template
+     branch: main
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [ ipa ]
+          options:
+            docstring_style: numpy
+            docstring_section_style: spacy
+            show_root_heading: false
+            show_root_toc_entry: false
+            show_root_full_path: false
+            heading_level: 2
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - md_in_html
+  - markdown_include.include
