@@ -28,7 +28,7 @@ With a versioned processing script ready in __source__ it is time to apply it to
     The runs directory is included in version control but is up to you to commit them after each run. This way you can keep track of which config file was used with which version of the code to produce a given output.
 
 ## Documentation
-In __docs__ a mkdocs project is set up to render a nice website with your documentation. The documentation is meant to be used to describe the project and the processing steps in detail, in particular how to execute them.
+In __docs__ a [mkdocs-material](https://squidfunk.github.io/mkdocs-material/reference/) project is set up to render a nice website with your documentation. The documentation is meant to be used to describe the project and the processing steps in detail, in particular how to execute them.
 
 !!! info Render Documentation
     To render the documentation locally you can run `pixi run show_docs`. This will start a local server and you can view the documentation in your browser. To render a static version use the command `pixi run build_docs` and your documentation will be available in the __root\_dir/site__ directory.
