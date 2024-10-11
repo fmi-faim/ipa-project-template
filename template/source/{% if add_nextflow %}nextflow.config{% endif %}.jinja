@@ -1,0 +1,33 @@
+profiles {
+    standard {
+        executor {
+            name = 'local'
+            maxForks = 2
+        }
+
+        process {
+            withLabel: 'cpu' {
+                cpus = 2
+            }
+        }
+    }
+
+
+    slurm {
+
+        executor {
+            name = 'slurm'
+            submitRateLimit = '50/60min'
+            queueSize = 50
+        }
+
+        process {
+            withLabel: 'cpu' {
+                cpus = 2
+                memory = '3 GB'
+                queue = 'main'
+                clusterOptions = '--time=1:00:00 --constraint "infiniband"'
+            }
+        }
+    }
+}

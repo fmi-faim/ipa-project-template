@@ -211,7 +211,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # infrastructure
-infrastructure/apps/**/
+infrastructure/**
+!infrastructure/README.md
 
 # pixi environments
 .pixi

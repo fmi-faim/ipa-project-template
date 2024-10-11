@@ -22,7 +22,7 @@ repos:
         language: python
         args: [--strict, --ignore-missing-imports]
         additional_dependencies: ['types-requests', 'types-PyYAML']
-        exclude: docs/source/conf.py
+        exclude: 'docs/source/conf.py|template/source/{% if add_demo %}s01_demo{% endif %}'
   - repo: https://github.com/crate-ci/typos
     rev: typos-dict-v0.11.27
     hooks:

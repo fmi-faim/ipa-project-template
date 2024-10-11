@@ -1,0 +1,40 @@
+
+params.config = "config.yaml"
+
+process STEP1 {
+    label 'cpu'
+
+    input:
+    path config
+
+    output:
+    path "*-step2-config.yaml"
+
+    script:
+    """
+    timestamp=\$(date +%s)
+    touch "\$timestamp"-step2-config.yaml
+    """
+}
+
+process STEP2 {
+    label 'cpu'
+
+    input:
+    path config
+
+    output:
+    path "*-result.yaml"
+
+    script:
+    """
+    filename="1728631434-step2-config.yaml"
+    first_number=\$(echo "\$filename" | cut -d '-' -f 1)
+    touch "\$first_number"-result.yaml
+    """
+}
+
+workflow {
+    step2_configs = STEP1(params.config)
+    results = STEP2(step2_configs.flatten())
+}

@@ -18,4 +18,69 @@ organization:
     default: Friedrich Miescher Institute for Biomedical Research (FMI), Basel (Switzerland)
     help: What is your organization name?
 
+python_batteries_included:
+    type: bool
+    default: false
+    help: Do you want to include the most common Python packages?
+
+add_napari:
+    type: bool
+    default: false
+    help: Do you want to include Napari in your project?
+
+add_nextflow:
+    type: bool
+    default: false
+    help: Do you want to include Nextflow in your project?
+
+unix_install_and_init:
+    type: bool
+    default: false
+    help: Do you want to add installation and initialization scripts for Unix systems?
+
+add_demo:
+    type: bool
+    default: false
+    help: Do you want to add a config and run demo?
+
 _subdirectory: template
+
+_message_before_copy: |
+    Thank you for using our ipa-project template to get your image processing
+    and analysis project started. We will ask you a few questions to tailor the
+    project to your needs.
+
+    Before you start, please make sure you have git installed on your system.
+    You can type `git --version` in your terminal to check if it is installed.
+
+_message_after_copy: |
+    Your project "{{ project_name }}" has been created successfully!
+
+    Next steps:
+
+    1. Change directory to the project root:
+
+       $ cd {{ _copier_conf.dst_path }}
+
+    2. Initialize a new git repository either via GitHub Desktop App or
+         via the command line:
+
+       $ git init
+       $ git add .
+       $ git commit -m "Initial commit."
+       $ git branch -M main
+
+    3. Build the project documentation:
+
+       $ pixi run build_docs
+
+_message_before_update: |
+    Thanks for updating your project using our template.
+
+    You'll be asked a series of questions whose answers are pre-populated
+    with previously entered values. Feel free to change them as needed.
+
+_message_after_update: |
+    Your project "{{ project_name }}" has been updated successfully!
+    In case there are any conflicts, please resolve them and track the changes
+    with git. Then, you're done.
