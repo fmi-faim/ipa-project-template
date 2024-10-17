@@ -4,8 +4,10 @@ repo_url: https://github.com/fmi-faim/ipa-project-template
 repo_name: ipa-project-template
 copyright: Copyright &copy; 2024, Friedrich Miescher Institute for Biomedical Research
 nav:
-  - Home: index.md
-  - 'Template Structure': ipa_structure.md
+  - 'IPA Project Template': index.md
+  - 'Organization':
+    - ipa_structure.md
+    - optional_features.md
   - Imprint: imprint.md
 theme:
   name: material
@@ -42,8 +44,6 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    - navigation.footer
-    - header.autohide
     - content.code.copy
   shortcuts:
     help: 191    # ?
@@ -83,3 +83,4 @@ markdown_extensions:
   - pymdownx.superfences
   - md_in_html
   - markdown_include.include
+  - def_list
