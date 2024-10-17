@@ -14,7 +14,7 @@ cache_status = "python -m faim_ipa.pixi.cache_status"
 source_status = "python -m faim_ipa.pixi.src_status source"
 log_commit = {cmd = 'python -m faim_ipa.pixi.log_commit $TASK', env = {TASK = ""}}
 {% if add_demo %}build_config = { cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; python $PIXI_PROJECT_ROOT/source/s01_demo/config.py", env = { WD = "runs/example"}, depends_on=["cache_status", "source_status"]}
-demo = { cmd = "cd $WD ; python $PIXI_PROJECT_ROOT/source/s01_demo/run.py --config $(pwd)/demo_config.yaml", env = { WD = "runs/example"}, depends_on=["cache_status", "source_status"]}
+demo = { cmd = "cd $WD ; TASK=DEMO pixi run log_commit ; python $PIXI_PROJECT_ROOT/source/s01_demo/run.py --config demo_config.yaml", env = { WD = "runs/example"}, depends_on=["cache_status", "source_status"]}
 {% else %}build_config = { cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; echo 'Implementation Missing.'", env = { WD = "runs/example"}, depends_on=["cache_status", "source_status"]}
 {% endif %}
 [dependencies]
