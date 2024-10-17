@@ -28,8 +28,7 @@ process STEP2 {
 
     script:
     """
-    filename="1728631434-step2-config.yaml"
-    first_number=\$(echo "\$filename" | cut -d '-' -f 1)
+    first_number=\$(echo "\$config" | cut -d '-' -f 1)
     touch "\$first_number"-result.yaml
     """
 }
