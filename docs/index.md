@@ -1,5 +1,9 @@
 {!README.md!lines=2-3}
 
+!!! example "Example Project"
+    Take a look at our [example-project](https://fmi-faim.github.io/example-project/) if you'd like to see the template in action!
+
+
 ## Prerequisites
 In our project template we use [pixi.sh](https://pixi.sh) as environment manager and [copier](https://copier.readthedocs.io/en/stable/) to generate a copy of the project template. The installation instructions for pixi can be found [here](https://pixi.sh/latest/#installation).
 After successful installation of pixi and restarting your terminal, you can type `pixi info` to get the current version of pixi.
