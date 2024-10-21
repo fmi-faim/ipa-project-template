@@ -228,3 +228,9 @@ results/**
 
 # TMP
 infrastructure/.tmp_*/**
+
+# nextflow
+runs/**/.nextflow
+runs/**/.nextflow.log*
+runs/**/work
+runs/**/*.html
