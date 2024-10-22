@@ -234,3 +234,6 @@ runs/**/.nextflow
 runs/**/.nextflow.log*
 runs/**/work
 runs/**/*.html
+
+# include githash.log
+!**/githash.log
