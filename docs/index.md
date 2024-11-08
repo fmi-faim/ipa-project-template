@@ -20,14 +20,17 @@ pixi global install copier
 ```
 
 ## Generate an IPA Project with Copier
-Copier will ask you a series of questions whose answers will be used to generate a tailored IPA project for you. To start the process run the following and replace `my-ipa-project` with the name of your project directory:
+Copier will ask you a series of questions whose answers will be used to generate a tailored IPA project for you. To start the process provide the name of your project and then copy the command:
+
+{{{user-defined-values}}}
+
 ```bash
-pixi x copier copy git+https://github.com/fmi-faim/ipa-project-template my-ipa-project
+pixi x copier copy git+https://github.com/fmi-faim/ipa-project-template PROJECT_NAME
 ```
 
 !!! success "Congratulations!"
     You have created a new personalized IPA project! Now you can change into the project root-directory with
     ```bash
-    cd my-ipa-project
+    cd PROJECT_NAME
     ```
     or open the directory in your file browser.

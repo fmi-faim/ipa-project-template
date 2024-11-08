@@ -19,3 +19,6 @@ mkdocs-material = ">=9.5.37,<10"
 mkdocstrings = ">=0.26.1,<0.27"
 mkdocstrings-python = ">=1.11.1,<2"
 markdown-include = ">=0.8.1,<0.9"
+
+[pypi-dependencies]
+mkdocs-user-defined-values = ">=0.0.5, <0.0.6"

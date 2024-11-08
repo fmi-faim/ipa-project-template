@@ -70,6 +70,10 @@ plugins:
             show_root_toc_entry: false
             show_root_full_path: false
             heading_level: 2
+  - user-defined-values:
+      keywords:
+        PROJECT_NAME:
+          placeholder: my-ipa-project
 markdown_extensions:
   - admonition
   - pymdownx.details
