@@ -1,5 +1,5 @@
 # IPA Project Structure
-The IPA projects structure aims to support the whole development cycle of your project. It is designed to be flexible and scalable, allowing you to grow your project in size and complexity without sacrificing clarity.
+The IPA project structure aims to support the whole development cycle of your project. It is designed to be flexible and scalable, allowing you to grow your project in size and complexity without sacrificing clarity.
 
 <figure markdown="span">
     ![Project Directory Structure](resources/directory_structure_overview.svg)

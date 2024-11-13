@@ -3,7 +3,7 @@ authors = ["Tim-Oliver Buchholz <tim-oliver.buchholz@fmi.ch>"]
 channels = ["conda-forge"]
 description = "Add a short description here"
 name = "ipa-project-template"
-platforms = ["linux-64"]
+platforms = ["linux-64", "win-64"]
 version = "0.1.0"
 
 [tasks]

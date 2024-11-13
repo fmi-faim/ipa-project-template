@@ -4,7 +4,8 @@ repo_url: https://github.com/fmi-faim/ipa-project-template
 repo_name: ipa-project-template
 copyright: Copyright &copy; 2024, Friedrich Miescher Institute for Biomedical Research
 nav:
-  - 'IPA Project Template': index.md
+  - 'IPA project template': index.md
+  - 'Using the template': installation.md
   - 'Organization':
     - ipa_structure.md
     - optional_features.md
