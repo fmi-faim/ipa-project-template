@@ -2,7 +2,9 @@
 name = "{{ project_name.title() }}"
 version = "0.1.0"
 description = "Add a short description here"
-authors = ["{{ author }} <{{ author_email }}>"]
+authors = [
+    "{{ author }} <{{ author_email }}>",
+]
 channels = ["conda-forge", "bioconda"]
 platforms = ["linux-64", "win-64", "osx-arm64", "osx-64"]
 
@@ -13,16 +15,26 @@ platforms = ["linux-64", "win-64", "osx-arm64", "osx-64"]
 cache_status = "python -m faim_ipa.pixi.cache_status"
 source_status = "python -m faim_ipa.pixi.src_status source"
 log_commit = {cmd = 'python -m faim_ipa.pixi.log_commit $TASK', env = {TASK = ""}}
-{% if add_demo %}build_config = { cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; python $PIXI_PROJECT_ROOT/source/s01_demo/config.py", env = { WD = "runs/example"}, depends_on=["cache_status", "source_status"]}
-demo = { cmd = "cd $WD ; TASK=DEMO pixi run log_commit ; python $PIXI_PROJECT_ROOT/source/s01_demo/run.py --config demo_config.yaml", env = { WD = "runs/example"}, depends_on=["cache_status", "source_status"]}
-{% else %}build_config = { cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; echo 'Implementation Missing.'", env = { WD = "runs/example"}, depends_on=["cache_status", "source_status"]}
+
+[tasks.config]
+{% if add_demo %}cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; python $PIXI_PROJECT_ROOT/source/s01_demo/config.py"
+{% else %}cmd = "mkdir -p $WD ; TASK=BUILD_CONFIG pixi run log_commit ; cd $WD ; echo 'Implementation Missing.'"
 {% endif %}
+env = { WD = "runs/example"}
+depends_on=["cache_status", "source_status"]
+
+{% if add_demo %}[tasks.demo]
+cmd = "cd $WD ; TASK=DEMO pixi run log_commit ; python $PIXI_PROJECT_ROOT/source/s01_demo/run.py --config demo_config.yaml"
+env = { WD = "runs/example"}
+depends_on=["cache_status", "source_status"]
+{% endif %}
+
 [dependencies]
 python = "3.12"
+faim-ipa = ">=0.10.0,<0.11"
 {% if python_batteries_included %}scikit-image = ">=0.24.0,<0.25"
 matplotlib = ">=3.9.1,<4"
 pandas = ">=2.2.2,<3"
-faim-ipa = ">=0.8.0,<0.9"
 rich = ">=13.9.1,<14"
 {% endif %}
 [feature.docs.dependencies]
@@ -51,8 +63,10 @@ platforms = ["linux-64", "osx-64", "osx-arm64"]
 [feature.nextflow.dependencies]
 nextflow = ">=24.4.4,<25"
 
-[feature.nextflow.tasks]
-nextflow = { cmd="TASK=NEXTFLOW pixi run log_commit ; cd $WD ; nextflow run $PIXI_PROJECT_ROOT/source/workflow.nf --config $(pwd)/config.yaml", env = { WD = "runs/example", PROFILE = "standard", MAIL = ""}, depends_on = ["cache_status", "source_status"]}
+[feature.nextflow.tasks.nextflow]
+cmd="TASK=NEXTFLOW pixi run log_commit ; cd $WD ; nextflow run $PIXI_PROJECT_ROOT/source/workflow.nf --config $(pwd)/config.yaml"
+env = { WD = "runs/example", PROFILE = "standard", MAIL = ""}
+depends_on = ["cache_status", "source_status"]
 {% endif %}
 [feature.jupyter.dependencies]
 jupyter = ">=1.0.0,<1.1"
