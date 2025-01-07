@@ -10,13 +10,13 @@ repos:
       - id: check-yaml # checks for correct yaml syntax for github actions ex.
         args: [--unsafe]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.7.2
+    rev: v0.8.6
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix, --extend-ignore=E402]
       - id: ruff-format
   - repo: https://github.com/crate-ci/typos
-    rev: v1.27.0
+    rev: v1.29.4
     hooks:
       - id: typos
         files: \.(py|md|rst|yaml|toml)
@@ -25,7 +25,7 @@ repos:
         exclude: pyproject.toml
 # mypy will force you to type your code ;)
 #   - repo: https://github.com/pre-commit/mirrors-mypy
-#     rev: v1.11.1
+#     rev: v1.14.1
 #     hooks:
 #       - id: mypy
 #         language: python
