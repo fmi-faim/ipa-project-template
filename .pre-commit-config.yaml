@@ -10,13 +10,13 @@ repos:
       - id: check-yaml # checks for correct yaml syntax for github actions ex.
         args: [--unsafe]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.6
+    rev: v0.9.9
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.14.1
+    rev: v1.15.0
     hooks:
       - id: mypy
         language: python
@@ -24,7 +24,7 @@ repos:
         additional_dependencies: ['types-requests', 'types-PyYAML']
         exclude: 'docs/source/conf.py|template/source/{% if add_demo %}s01_demo{% endif %}'
   - repo: https://github.com/crate-ci/typos
-    rev: v1.29.4
+    rev: v1.30.0
     hooks:
       - id: typos
         files: \.(py|md|rst|yaml|toml|jinja)
