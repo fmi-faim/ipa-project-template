@@ -53,6 +53,8 @@ theme:
     next: 78     # n
     previous: 80 # p
     search: 83   # s
+extra_javascript:
+  - javascripts/trigger_user_defined_values.js
 plugins:
   - offline:
       enabled: !ENV [ OFFLINE, false ]  # noqa
